@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Exercicio</title>
+</head>
+<body>
+     <h1>Sistema de nacionalidade</h1>
+     Digite o pais que você nasceu: <input type="text" name="pais_nasc" id="pais_nasc">
+     <input type="button" value="verificar" onclick="enviar_nacionalidade()">
+     <div id="resultado"></div>
+
+
+     <script>
+          function enviar_nacionalidade(){
+               var nacionalidade = window.document.querySelector('input#pais_nasc').value
+               var res = window.document.querySelector('div#resultado')
+               res.innerHTML = `<p>Pais que você nasceu: ${nacionalidade}</p>`
+
+               if(nacionalidade == 'Brasil'){
+                    res.innerHTML += `<p>Você é brasileiro</p>`    
+               }
+               else{
+                 res.innerHTML += `<p>Você é estrangeiro</p>`   
+               }
+                 
+               
+          }
+     </script>
+     
+</body>
+</html>
